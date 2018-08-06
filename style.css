@@ -1,0 +1,104 @@
+.list{
+
+    /*padding: 0;*/
+    margin: 0;
+    list-style: none;
+    padding-left: 100px;
+}
+/*.slick-current + li{*/
+    /*color: red;*/
+    /*position: relative;*/
+/*}*/
+/*.slick-current + li::before{*/
+    /*content: '';*/
+    /*width: 15px;*/
+    /*height: 15px;*/
+    /*background-color: green;*/
+    /*border-radius: 50%;*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: -30px;*/
+    /*transform: translateY(-50%);*/
+/*}*/
+/*.slick-vertical .slick-track li.slick-active:last-child{*/
+    /*color: yellow;*/
+/*}*/
+/*.slick-slide.slick-active:last-of-type {*/
+    /*opacity: 0.4;*/
+/*}*/
+/*.slick-current + li.slick-active:nth-child(3){*/
+    /*color: red;*/
+    /*position: relative;*/
+/*}*/
+.slick-track{
+    position: relative;
+    border-left: 1px solid red;
+    padding-left: 20px;
+}
+.slick-list{
+    padding: 0 10px;
+}
+body{
+    margin: 0;
+    padding: 50px;
+}
+.slick-arrow{
+    border: none;
+    border-top: 2px solid blue;
+    border-right: 2px solid blue;
+    font-size: 0;
+    position: absolute;
+    top: -10px;
+    left: 133px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    transform: rotate(-45deg);
+}
+.slick-next{
+    top: auto;
+    bottom: -10px;
+    transform: rotate(135deg);
+}
+
+@media (max-width: 991px) {
+    .slick-track{
+        border: none;
+        /*border-top: 1px solid red;*/
+    }
+    .slick-track::before{
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: red;
+        position: absolute;
+        top: -13px;
+        left: 0;
+        right: 0;
+    }
+    .list{
+        padding: 0;
+    }
+    .slick-current + li::before{
+        left: 50%;
+        top: -20px;
+        transform: translate(-50%, 0);
+    }
+    .slick-list{
+        padding: 30px 10px;
+    }
+    .slick-slide{
+        text-align: center;
+    }
+    .slick-arrow{
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%)rotate(-135deg);
+    }
+    .slick-next{
+        left: auto;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%) rotate(45deg);
+    }
+}
